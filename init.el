@@ -37,7 +37,6 @@
   (load-file (expand-file-name file user-init-dir)))
 
 ;; load custom emacs settings
-(load-user-file "custom.el")
 (load-user-file "install.el")
 (load-user-file "backup.el")
 (load-user-file "modes.el")
