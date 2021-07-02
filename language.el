@@ -16,3 +16,17 @@
   (local-set-key ";" 'self-insert-command))
 
 (add-hook 'asm-mode-hook 'my-hook)
+
+;; enable c autocomplete stuff
+(use-package lsp-mode :commands lsp)
+(use-package lsp-ui :commands lsp-ui-mode)
+(use-package company-lsp :commands company-lsp)
+
+(use-package ccls
+  :hook ((c-mode c++-mode objc-mode cuda-mode) .
+         (lambda () (require 'ccls) (lsp))))
+
+(setq lsp-file-watch-threshold 2000)
+
+(setq ccls-executable "/usr/bin/ccls")
+;; (setq ccls-args '("--log-file=/tmp/ccls.log"))
