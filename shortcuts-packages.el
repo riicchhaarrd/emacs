@@ -14,3 +14,12 @@
 ;; P u to git push
 ;; F u to git pull
 (global-set-key (kbd "C-c m s") 'magit-status)
+(global-set-key (kbd "C-c m f") 'vc-diff)
+
+(global-set-key (kbd "C-b") 'highlight-symbol)
+(global-set-key (kbd "C-n") 'highlight-symbol-remove-all)
+;; (require 'highlight-symbol)
+;; (global-set-key [(control f3)] 'highlight-symbol)
+;; (global-set-key [f3] 'highlight-symbol-next)
+;; (global-set-key [(shift f3)] 'highlight-symbol-prev)
+;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace)

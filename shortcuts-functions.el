@@ -126,3 +126,5 @@ This command does not push text to `kill-ring'."
 
 (global-set-key (kbd "<backtab>") 'untab-region)
 (global-set-key (kbd "<tab>") 'tab-region)
+(global-set-key (kbd "C-d") 'duplicate-line)
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
