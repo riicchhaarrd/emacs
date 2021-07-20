@@ -106,6 +106,18 @@ This command does not push text to `kill-ring'."
   (insert (concat "[[" file "]]"))
   (org-display-inline-images))
 
+;; requires projectile package
+
+(defun my-custom-grep ()
+  "Custom grep function"
+  (interactive)
+  (let (s)
+    (setq s (read-string "Search:"))
+    (grep (format "grep --color -r -nH --null -e \"%s\" \"%s\"" s (projectile-project-root)))
+    ;; (message "Searching for %s in %s" s (projectile-project-root))
+    )
+  )
+
 ;; bindings
 
 ; bind them to emacs's default shortcut keys:
@@ -128,3 +140,33 @@ This command does not push text to `kill-ring'."
 (global-set-key (kbd "<tab>") 'tab-region)
 (global-set-key (kbd "C-d") 'duplicate-line)
 (global-set-key (kbd "C-a") 'mark-whole-buffer)
+
+(global-set-key (kbd "C-j") 'my-custom-grep) ;; in hindsight could've just used projectile-grep
+;; (global-set-key (kbd "C-l") 'projectile-grep)
+(global-set-key (kbd "C-t") 'projectile-find-file)
+
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;; some extra helpful stuff for replacing stuff
+
+;; C-c p r runs the command projectile-replace
+
+;; https://stackoverflow.com/questions/270930/using-emacs-to-recursively-find-and-replace-in-text-files-not-already-open
+;; It's a more interactive method, and requires wgrep, rgrep and iedit. Both iedit and wgrep must be installed via MELPA or Marmalade (using M-x package-list-packages)
+;; 
+;; First run M-x rgrep to find the string you're looking for.
+;; 
+;; You'll be able to specify file types/pattern and the folder to recurse.
+;; 
+;; Next you'll need to run wgrep start it with C-s C-p.
+;; 
+;; Wgrep will let you edit the rgrep results, so set a region on the string to match and start iedit-mode with C-; (depending on your terminal you may need to re-bind this)
+;; 
+;; All occurrences will be editable at once. C-x C-s to commit wgrep. Then C-x s ! to save the changed files.
+;; 
+;; The main benefit of this method is that you can use iedit-mode to toggle off certain matches M-;. You can also use the results in rgrep to jump into the files, for example if you have an unexpected match.
+;; 
+;; I find it very useful for doing source edits and renaming symbols (variables, function names etc.) across a project.
+;; 
+;; If you don't already know/use iedit mode it's a very handy tool, I strongly recommend you give it a look.
