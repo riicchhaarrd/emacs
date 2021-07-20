@@ -16,6 +16,7 @@
 (global-set-key (kbd "C-c m s") 'magit-status)
 (global-set-key (kbd "C-c m f") 'vc-diff)
 
+(global-set-key (kbd "C-t") 'projectile-find-file)
 (global-set-key (kbd "C-b") 'highlight-symbol)
 (global-set-key (kbd "C-n") 'highlight-symbol-remove-all)
 ;; (require 'highlight-symbol)
