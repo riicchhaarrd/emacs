@@ -11,3 +11,5 @@
 (desktop-save-mode 1) ; 0 for off
 (scroll-bar-mode t)
 (highlight-numbers-mode t)
+(require 'iedit)
+(define-key global-map (kbd "C-x t") 'switch-to-completions)
