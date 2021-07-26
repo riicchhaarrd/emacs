@@ -4,15 +4,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes '(liteblu))
+ '(custom-enabled-themes '(borland-blue))
  '(custom-safe-themes
    '("f5e984f4dd51243ad7eeebc318f3338a84ff3b86718ae9e62f3acf9ab877e94f" "e6df46d5085fde0ad56a46ef69ebb388193080cc9819e2d6024c9c6e27388ba9" "cbdcdfe96e7c6ff03439fcefc964ed5e6b071d558088b852243dffe3b93c9df4" default))
  '(ediff-split-window-function 'split-window-horizontally t)
  '(horizontal-scroll-bar-mode nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(ace-jump-mode expand-region php-mode wgrep iedit projectile git-timemachine highlight-symbol ccls magit zenburn-theme solarized-theme gruvbox-theme rainbow-delimiters highlight-numbers plantuml-mode org-download org-superstar org-ref ox-twbs org-bullets yasnippet-snippets lsp-ui evil company-lsp use-package treemacs naysayer-theme clang-format which-key))
- '(scroll-bar-mode nil)
+   '(borland-blue-theme ace-jump-mode expand-region php-mode wgrep iedit projectile git-timemachine highlight-symbol ccls magit zenburn-theme solarized-theme gruvbox-theme rainbow-delimiters highlight-numbers plantuml-mode org-download org-superstar org-ref ox-twbs org-bullets yasnippet-snippets lsp-ui evil company-lsp use-package treemacs naysayer-theme clang-format which-key))
  '(scroll-conservatively 10)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -20,7 +19,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 97 :width normal))))
+ '(default ((t (:family "More Perfect DOS VGA" :foundry "SWAP" :slant normal :weight normal :height 119 :width normal))))
  '(minibuffer-prompt ((t (:background "black" :foreground "#F0DFAF" :weight bold)))))
 
 ;; https://stackoverflow.com/questions/2079095/how-to-modularize-an-emacs-configuration/2079146

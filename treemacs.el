@@ -12,6 +12,6 @@
               treemacs-directory-collapsed-face
               treemacs-file-face
               treemacs-tags-face))
-  (set-face-attribute face nil :family "Segoe UI" :height 110))
+  (set-face-attribute face nil :family "More Perfect DOS VGA" :height 119))
 
 ;; (treemacs-toggle-fixed-width)
