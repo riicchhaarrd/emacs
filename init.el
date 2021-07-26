@@ -71,3 +71,7 @@
 
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+;; note to self when using borland-blue theme
+;; change the fore and backcolors to
+;; :foreground "#f0ef6e"
+;; :background "#001aa3"
