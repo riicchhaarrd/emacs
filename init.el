@@ -11,7 +11,7 @@
  '(horizontal-scroll-bar-mode nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
-   '(expand-region php-mode wgrep iedit projectile git-timemachine highlight-symbol ccls magit zenburn-theme solarized-theme gruvbox-theme rainbow-delimiters highlight-numbers plantuml-mode org-download org-superstar org-ref ox-twbs org-bullets yasnippet-snippets lsp-ui evil company-lsp use-package treemacs naysayer-theme clang-format which-key))
+   '(ace-jump-mode expand-region php-mode wgrep iedit projectile git-timemachine highlight-symbol ccls magit zenburn-theme solarized-theme gruvbox-theme rainbow-delimiters highlight-numbers plantuml-mode org-download org-superstar org-ref ox-twbs org-bullets yasnippet-snippets lsp-ui evil company-lsp use-package treemacs naysayer-theme clang-format which-key))
  '(scroll-bar-mode nil)
  '(scroll-conservatively 10)
  '(tool-bar-mode nil))
@@ -69,3 +69,6 @@
 (advice-add 'ediff-quit :around #'disable-y-or-n-p)
 
 ;; (server-start) ;; so we can use a bash script and windmove using emacsclient
+
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)

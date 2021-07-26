@@ -113,7 +113,7 @@ This command does not push text to `kill-ring'."
   (interactive)
   (let (s)
     (setq s (read-string "Search:"))
-    (grep (format "grep --color -r -nH --null -e \"%s\" \"%s\"" s (projectile-project-root)))
+    (grep (format "grep --color -r -nH --null -e \"%s\" \"%s\" --include \\*.%s" s (projectile-project-root) (file-name-extension buffer-file-name)))
     ;; (message "Searching for %s in %s" s (projectile-project-root))
     )
   )
