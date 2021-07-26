@@ -3,17 +3,20 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(global-hl-line-mode nil)
+ '(show-paren-mode t)
+ '(ido-mode (quote buffer) nil (ido))
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes '(borland-blue))
  '(custom-safe-themes
-   '("f5e984f4dd51243ad7eeebc318f3338a84ff3b86718ae9e62f3acf9ab877e94f" "e6df46d5085fde0ad56a46ef69ebb388193080cc9819e2d6024c9c6e27388ba9" "cbdcdfe96e7c6ff03439fcefc964ed5e6b071d558088b852243dffe3b93c9df4" default))
+   '("4240f4cf3d30b67bf750c21d936fa4c5470eb115614198f0678162608c72a709" default))
  '(ediff-split-window-function 'split-window-horizontally t)
  '(horizontal-scroll-bar-mode nil)
  '(menu-bar-mode nil)
  '(package-selected-packages
    '(borland-blue-theme ace-jump-mode expand-region php-mode wgrep iedit projectile git-timemachine highlight-symbol ccls magit zenburn-theme solarized-theme gruvbox-theme rainbow-delimiters highlight-numbers plantuml-mode org-download org-superstar org-ref ox-twbs org-bullets yasnippet-snippets lsp-ui evil company-lsp use-package treemacs naysayer-theme clang-format which-key))
- '(scroll-conservatively 10)
  '(tool-bar-mode nil))
+ '(scroll-conservatively 10))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
