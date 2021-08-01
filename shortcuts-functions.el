@@ -131,15 +131,15 @@ This command does not push text to `kill-ring'."
 (define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)
 
 ;; goto line number
-(define-key global-map [?\s-g] 'goto-line)
+(define-key global-map [?\s-g] 'goto-line) ;; alternatively use M-g g
 
 ;; paste image from clipboard using org mode
 (global-set-key (kbd "C-x p") 'org-insert-image-clipboard)
 
 (global-set-key (kbd "<backtab>") 'untab-region)
-(global-set-key (kbd "<tab>") 'tab-region)
+;; (global-set-key (kbd "<tab>") 'tab-region)
 (global-set-key (kbd "C-d") 'duplicate-line)
-(global-set-key (kbd "C-a") 'mark-whole-buffer)
+;; (global-set-key (kbd "C-a") 'mark-whole-buffer)
 
 (global-set-key (kbd "C-j") 'my-custom-grep) ;; in hindsight could've just used projectile-grep
 ;; (global-set-key (kbd "C-l") 'projectile-grep)

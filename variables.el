@@ -17,8 +17,9 @@
 ;;   (other-window 1))
 
 (setq magit-ediff-dwim-show-on-hunks t)
-(winner-mode t)
-(add-hook 'ediff-after-quit-hook-internal 'winner-undo)
+;; (winner-mode t) ;; conflicting with C-c <left> for moving around in tty mode
+;; (add-hook 'ediff-after-quit-hook-internal 'winner-undo)
+
 ;; https://stackoverflow.com/questions/9433013/can-i-make-emacs-grep-windows-just-use-the-other-window-to-open-files-in
 ;; This will prevent Emacs from splitting windows automatically (horizontally or vertically). This might be undesirable in other situations, but this should do the job. Try it for a week or so and see if it disrupts your flow.
 (setq split-height-threshold nil
