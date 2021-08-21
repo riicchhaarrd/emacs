@@ -3,28 +3,25 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(global-hl-line-mode nil)
- '(show-paren-mode t)
- '(ido-mode (quote buffer) nil (ido))
- '(auto-dim-other-buffers-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes '(custom))
+ '(custom-enabled-themes '(yaysayer))
  '(custom-safe-themes
-   '("4240f4cf3d30b67bf750c21d936fa4c5470eb115614198f0678162608c72a709" default))
+   '(default))
  '(ediff-split-window-function 'split-window-horizontally t)
+ '(global-hl-line-mode nil)
  '(horizontal-scroll-bar-mode nil)
- '(menu-bar-mode nil)
+ '(ido-mode 'buffer nil (ido))
  '(package-selected-packages
    '(treemacs-magit auto-dim-other-buffers borland-blue-theme ace-jump-mode expand-region php-mode wgrep iedit projectile git-timemachine highlight-symbol ccls magit zenburn-theme solarized-theme gruvbox-theme rainbow-delimiters highlight-numbers plantuml-mode org-download org-superstar org-ref ox-twbs org-bullets yasnippet-snippets lsp-ui evil company-lsp use-package treemacs naysayer-theme clang-format which-key))
+ '(scroll-bar-mode t)
  '(scroll-conservatively 10)
- '(show-paren-mode t)
- '(tool-bar-mode nil)
+ '(show-paren-mode nil)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Consolas" :foundry "MS  " :slant normal :weight normal :height 97 :width normal))))
  '(ediff-even-diff-A ((t (:extend t :background "#fad9d9"))))
  '(ediff-even-diff-B ((t (:extend t :background "aquamarine"))))
  '(ediff-odd-diff-A ((t (:extend t :background "#f6baba"))))
@@ -105,3 +102,6 @@
 
 (setq mwheel-scroll-up-function 'mwheel-scroll-all-scroll-up-all)
 (setq mwheel-scroll-down-function 'mwheel-scroll-all-scroll-down-all)
+
+(set-window-fringes nil 0 0)
+(fringe-mode 0)

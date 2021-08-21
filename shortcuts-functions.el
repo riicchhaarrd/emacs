@@ -118,6 +118,16 @@ This command does not push text to `kill-ring'."
     )
   )
 
+(defun my-custom-lgrep ()
+  "Custom grep function"
+  (interactive)
+  (let (s)
+    (setq s (read-string "Search:"))
+    (grep (format "grep --color -nH --null -e \"%s\" * --include \\*.%s" s (file-name-extension buffer-file-name)))
+    ;; (message "Searching for %s in %s" s (projectile-project-root))
+    )
+  )
+
 ;; bindings
 
 ; bind them to emacs's default shortcut keys:
@@ -138,10 +148,12 @@ This command does not push text to `kill-ring'."
 
 (global-set-key (kbd "<backtab>") 'untab-region)
 ;; (global-set-key (kbd "<tab>") 'tab-region)
-(global-set-key (kbd "C-d") 'duplicate-line)
+;; (global-set-key (kbd "C-d") 'duplicate-line)
+;; (define-key c-mode-base-map (kbd "C-d") 'duplicate-line)
 ;; (global-set-key (kbd "C-a") 'mark-whole-buffer)
 
 (global-set-key (kbd "C-j") 'my-custom-grep) ;; in hindsight could've just used projectile-grep
+(global-set-key (kbd "C-l") 'my-custom-lgrep)
 ;; (global-set-key (kbd "C-l") 'projectile-grep)
 (global-set-key (kbd "C-t") 'projectile-find-file)
 
@@ -170,3 +182,11 @@ This command does not push text to `kill-ring'."
 ;; I find it very useful for doing source edits and renaming symbols (variables, function names etc.) across a project.
 ;; 
 ;; If you don't already know/use iedit mode it's a very handy tool, I strongly recommend you give it a look.
+
+;; https://stackoverflow.com/questions/23712076/how-to-remove-m-in-emacs/23712513
+(defun delete-carrage-returns ()
+  (interactive)
+  (save-excursion
+    (goto-char 0)
+    (while (search-forward "\r" nil :noerror)
+      (replace-match ""))))

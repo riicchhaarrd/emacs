@@ -5,7 +5,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.gsc\\'" . c-mode))
 (add-hook 'c-mode-common-hook 'superword-mode)
-(add-hook 'c-mode-common-hook 'global-linum-mode)
+;; (add-hook 'c-mode-common-hook 'global-linum-mode)
 
 (require 'rainbow-delimiters)
 ;; (add-hook 'c-mode-common-hook 'rainbow-delimeters)
