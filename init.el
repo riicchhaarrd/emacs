@@ -6,7 +6,7 @@
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes '(yaysayer))
  '(custom-safe-themes
-   '(default))
+   '("1ac99a1bd4c8327f0c569020368aa46bb4ea0d2ee510c3cc9c1247fce0d291e1" default))
  '(ediff-split-window-function 'split-window-horizontally t)
  '(global-hl-line-mode nil)
  '(horizontal-scroll-bar-mode nil)
@@ -105,3 +105,5 @@
 
 (set-window-fringes nil 0 0)
 (fringe-mode 0)
+
+(setq-default mode-line-format nil)

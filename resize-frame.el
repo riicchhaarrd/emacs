@@ -21,6 +21,8 @@
     (set-char-table-range (nth 1 map) t 'resize-frame-done)
     (define-key map (kbd "C-p") 'windmove-swap-states-up)
     (define-key map (kbd "C-n") 'windmove-swap-states-down)
+    (define-key map (kbd "C-j") 'windmove-swap-states-right)
+    (define-key map (kbd "C-k") 'windmove-swap-states-left)
     (define-key map (kbd "C-f") 'enlarge-window-horizontally)
     ;; (define-key map (kbd "C-b") 'shrink-window-horizontally)
     (define-key map (kbd "C-b") 'resize-frame-done)
